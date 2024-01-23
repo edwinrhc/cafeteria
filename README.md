@@ -1,6 +1,6 @@
 # Cafeteria
 
-Este es un proyecto de cafeteria que utiliza Gulp para automatizar tareas. El propósito principal de este proyecto es [describir brevemente el objetivo o funcionalidad del proyecto].
+Este es un proyecto de cafeteria que utiliza Gulp para automatizar tareas. El propósito principal de este proyecto.
 
 ## Configuración
 
@@ -13,3 +13,17 @@ Para comenzar con el proyecto, sigue estos pasos:
 2. **Instalar Gulp:**
     ```bash
     npm install --save-dev gulp
+
+
+## Crear GulFile.js
+Luego creamos el archivo gulfile.js
+
+1. **Ejecutando primera Tarea**
+    ```bash
+    function tarea(done){
+    console.log('Mi primera tarea .... ');
+    done(); // Aqui finaliza la tarea
+    }
+    exports.tarea = tarea;
+    Desde la consola
+    gulp tarea
