@@ -9,3 +9,7 @@ Para comenzar con el proyecto, sigue estos pasos:
 1. **Crea un archivo package.json:**
    ```bash
    npm init
+
+2. **Instalar Gulp:**
+    ```bash
+    npm install --save-dev gulp
