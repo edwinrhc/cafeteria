@@ -27,3 +27,16 @@ Luego creamos el archivo gulfile.js
     exports.tarea = tarea;
     Desde la consola
     gulp tarea
+
+## Creando estructura sass
+crear una carpeta src luego otra carpeta scss y dentro de la carpeta app.scss
+
+cafeteria/
+|-- src/
+|   |-- scss/
+|       |-- app.scss
+
+
+## Instalar despendencias
+    ```bash
+    npm i --save-dev sass gulp-sass

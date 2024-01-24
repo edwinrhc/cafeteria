@@ -1,12 +1,26 @@
+const { src,dest, watch } = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 
+function css(done){
 
-function tarea(done){
-    console.log('Mi primera tarea .... ');
-    done(); // Aqui finaliza la tarea
+    //Compilar sass
+    //Pasos: 1 - Identificar archivo, 3 - compilarla, 3 - Guardar el .css
+
+    //en que carpeta se encuentra la hoja de estilo
+    src('src/scss/app.scss')
+        //Compila
+        .pipe(sass({ outputStyle:'compressed'}))
+        //Gurdamos la hoja compilada
+        .pipe( dest('build/css') )
+        // Finaliza la ejecución
+        done();
+
 }
 
-//Exportamos y como vamos a mandar a llamar la tarea
-exports.tarea = tarea;
+function dev(){
+    //Aqui escucha pero no finaliza hasta que lo canceles
+    watch('src/scss/app.scss', css)
+}
 
-// para llamar la primera tarea primero abrimos la consola y escribimos lo siguiente
-// gulp tarea
+exports.css = css;
+exports.dev = dev;
